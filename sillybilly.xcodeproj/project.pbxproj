@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CFC0403F733FF7BE8691084 /* Pods_sillybilly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE71DA8CE50913EB2AE2ADB /* Pods_sillybilly.framework */; };
 		AD76615B22BB792500F5D6C0 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD76615922BB792500F5D6C0 /* DataModel.xcdatamodeld */; };
 		AD76615D22BC196A00F5D6C0 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76615C22BC196A00F5D6C0 /* CategoryViewController.swift */; };
 		AD7E61CD22BA1C29003347E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E61CC22BA1C29003347E5 /* AppDelegate.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D7100AC1D80CED79ED7B2EF /* Pods-sillybilly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sillybilly.debug.xcconfig"; path = "Target Support Files/Pods-sillybilly/Pods-sillybilly.debug.xcconfig"; sourceTree = "<group>"; };
+		660602492EFE83BF7D659DF6 /* Pods-sillybilly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sillybilly.release.xcconfig"; path = "Target Support Files/Pods-sillybilly/Pods-sillybilly.release.xcconfig"; sourceTree = "<group>"; };
 		AD76615A22BB792500F5D6C0 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		AD76615C22BC196A00F5D6C0 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		AD7E61C922BA1C29003347E5 /* sillybilly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sillybilly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +29,7 @@
 		AD7E61D322BA1C2B003347E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7E61D622BA1C2B003347E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7E61D822BA1C2B003347E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFE71DA8CE50913EB2AE2ADB /* Pods_sillybilly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sillybilly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CFC0403F733FF7BE8691084 /* Pods_sillybilly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		863D2C72B290E2D3C3E58343 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFE71DA8CE50913EB2AE2ADB /* Pods_sillybilly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD7E61C022BA1C29003347E5 = {
 			isa = PBXGroup;
 			children = (
 				AD7E61CB22BA1C29003347E5 /* sillybilly */,
 				AD7E61CA22BA1C29003347E5 /* Products */,
+				DC88575AC683B794C704257F /* Pods */,
+				863D2C72B290E2D3C3E58343 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,16 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		DC88575AC683B794C704257F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D7100AC1D80CED79ED7B2EF /* Pods-sillybilly.debug.xcconfig */,
+				660602492EFE83BF7D659DF6 /* Pods-sillybilly.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD7E61DB22BA1C2B003347E5 /* Build configuration list for PBXNativeTarget "sillybilly" */;
 			buildPhases = (
+				7742E97ED206124FF6C389EA /* [CP] Check Pods Manifest.lock */,
 				AD7E61C522BA1C29003347E5 /* Sources */,
 				AD7E61C622BA1C29003347E5 /* Frameworks */,
 				AD7E61C722BA1C29003347E5 /* Resources */,
+				9D1ECFE815BE5879D711AB96 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7742E97ED206124FF6C389EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sillybilly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D1ECFE815BE5879D711AB96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sillybilly/Pods-sillybilly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sillybilly/Pods-sillybilly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sillybilly/Pods-sillybilly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD7E61C522BA1C29003347E5 /* Sources */ = {
@@ -320,6 +389,7 @@
 		};
 		AD7E61DC22BA1C2B003347E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D7100AC1D80CED79ED7B2EF /* Pods-sillybilly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +408,7 @@
 		};
 		AD7E61DD22BA1C2B003347E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660602492EFE83BF7D659DF6 /* Pods-sillybilly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

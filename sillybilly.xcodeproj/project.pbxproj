@@ -3,24 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6CFC0403F733FF7BE8691084 /* Pods_sillybilly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE71DA8CE50913EB2AE2ADB /* Pods_sillybilly.framework */; };
-		AD76615B22BB792500F5D6C0 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD76615922BB792500F5D6C0 /* DataModel.xcdatamodeld */; };
 		AD76615D22BC196A00F5D6C0 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76615C22BC196A00F5D6C0 /* CategoryViewController.swift */; };
 		AD7E61CD22BA1C29003347E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E61CC22BA1C29003347E5 /* AppDelegate.swift */; };
 		AD7E61CF22BA1C29003347E5 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E61CE22BA1C29003347E5 /* TodoListViewController.swift */; };
 		AD7E61D222BA1C29003347E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7E61D022BA1C29003347E5 /* Main.storyboard */; };
 		AD7E61D422BA1C2B003347E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7E61D322BA1C2B003347E5 /* Assets.xcassets */; };
 		AD7E61D722BA1C2B003347E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7E61D522BA1C2B003347E5 /* LaunchScreen.storyboard */; };
+		ADAA79CE22BD144500ABF8EB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA79CD22BD144500ABF8EB /* Item.swift */; };
+		ADAA79D022BD145300ABF8EB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA79CF22BD145300ABF8EB /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D7100AC1D80CED79ED7B2EF /* Pods-sillybilly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sillybilly.debug.xcconfig"; path = "Target Support Files/Pods-sillybilly/Pods-sillybilly.debug.xcconfig"; sourceTree = "<group>"; };
 		660602492EFE83BF7D659DF6 /* Pods-sillybilly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sillybilly.release.xcconfig"; path = "Target Support Files/Pods-sillybilly/Pods-sillybilly.release.xcconfig"; sourceTree = "<group>"; };
-		AD76615A22BB792500F5D6C0 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		AD76615C22BC196A00F5D6C0 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		AD7E61C922BA1C29003347E5 /* sillybilly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sillybilly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7E61CC22BA1C29003347E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +29,8 @@
 		AD7E61D322BA1C2B003347E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7E61D622BA1C2B003347E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7E61D822BA1C2B003347E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADAA79CD22BD144500ABF8EB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		ADAA79CF22BD145300ABF8EB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CFE71DA8CE50913EB2AE2ADB /* Pods_sillybilly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sillybilly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,7 +88,8 @@
 		AD7E61E022BA62F4003347E5 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				AD76615922BB792500F5D6C0 /* DataModel.xcdatamodeld */,
+				ADAA79CF22BD145300ABF8EB /* Category.swift */,
+				ADAA79CD22BD144500ABF8EB /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -123,7 +126,6 @@
 				2D7100AC1D80CED79ED7B2EF /* Pods-sillybilly.debug.xcconfig */,
 				660602492EFE83BF7D659DF6 /* Pods-sillybilly.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,10 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADAA79CE22BD144500ABF8EB /* Item.swift in Sources */,
 				AD76615D22BC196A00F5D6C0 /* CategoryViewController.swift in Sources */,
 				AD7E61CF22BA1C29003347E5 /* TodoListViewController.swift in Sources */,
-				AD76615B22BB792500F5D6C0 /* DataModel.xcdatamodeld in Sources */,
 				AD7E61CD22BA1C29003347E5 /* AppDelegate.swift in Sources */,
+				ADAA79D022BD145300ABF8EB /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,19 +450,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AD76615922BB792500F5D6C0 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AD76615A22BB792500F5D6C0 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = AD76615A22BB792500F5D6C0 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AD7E61C122BA1C29003347E5 /* Project object */;
 }
